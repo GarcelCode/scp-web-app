@@ -11,7 +11,7 @@ export function ProtectedRoutes({children}:IProtectedRoutesProps){
     const authValue = useContext(authContext);
 
     if(authValue.loading){
-        return <h1>Loading</h1>
+        return <h1>Cargando</h1>
     }
 
     if(!authValue.user){

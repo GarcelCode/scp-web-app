@@ -42,12 +42,12 @@ export function Login() {
     return (
         <div className="h-screen bg-slate-700 flex justify-center items-center">
             <Form>
-                <h1 className="text-gray-800 text-3xl text-center font-bold pb-3 md:text-5xl">Log In</h1>
-                <FormInputRow text="User" type="text" name="email" action={handleChange}/>
-                <FormInputRow text="Password" type="password" name="password" action={handleChange}/>
+                <h1 className="text-gray-800 text-3xl text-center font-bold pb-3 md:text-5xl">Iniciar sesión</h1>
+                <FormInputRow text="Correo" type="text" name="email" action={handleChange}/>
+                <FormInputRow text="Contraseña" type="password" name="password" action={handleChange}/>
                 <label className="text-center text-red-500"> {error && <p>{error}</p>} </label>
-                <FormButton text="Log In" color="bg-blue-500" action={handleLogin}/>
-                <label className="mt-2 text-center text-sm"> Don't have an account yet? <a href="/register" className="cursor-pointer text-blue-700 underline">Register</a></label>
+                <FormButton text="Iniciar Sesión" color="bg-blue-500" action={handleLogin}/>
+                <label className="mt-2 text-center text-sm"> ¿No tienes una cuenta? <a href="/register" className="cursor-pointer text-blue-700 underline">Registrar</a></label>
             </Form>
         </div>
     );
