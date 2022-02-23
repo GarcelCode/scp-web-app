@@ -27,7 +27,7 @@ export function Register () {
         setError("");
         try{
             await authValue.signup(inputData.email, inputData.password);
-            navigate('/');
+            navigate('/app');
         }catch (error:any){
             if(error.code === "auth/invalid-email"){
                 setError("Invalid E-mail")

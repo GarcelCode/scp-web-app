@@ -24,7 +24,7 @@ export function Login() {
         setError('')
         try {
             await authValue.login(inputData.email, inputData.password)
-            navigate('/')
+            navigate('/app')
         }catch (error:any){
             if(error.code === "auth/wrong-password"){
                 setError("Wrong Password");

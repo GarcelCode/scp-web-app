@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Outlet } from "react-router-dom";
 import { authContext } from "../Contexts/Auth";
 
 export function Home() {
@@ -29,6 +30,7 @@ export function Home() {
           </div>
         </div>
       </header>
+      <Outlet/>
     </div>
   );
 }

@@ -2,11 +2,11 @@ import { useContext } from "react"
 import { authContext } from "../Contexts/Auth"
 import { Navigate } from "react-router-dom";
 
-interface IProtectedRouteProps {
-    children: JSX.Element;
+interface IProtectedRoutesProps {
+    children: JSX.Element | JSX.Element[];
 }
 
-export function ProtectedRoute({children}:IProtectedRouteProps){
+export function ProtectedRoutes({children}:IProtectedRoutesProps){
 
     const authValue = useContext(authContext);
 
