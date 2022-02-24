@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { authContext } from "../Contexts/Auth";
 
 export function Home() {
@@ -19,8 +19,8 @@ export function Home() {
           <h1 className="text-3xl ml-5 text-white">SCP APP</h1>
           <div className="flex items-center gap-3">
             <ul className="flex gap-3">
-              <li className="hover:text-slate-100 duration-300 cursor-pointer">To-Do App</li>
-              <li className="hover:text-slate-100 duration-300 cursor-pointer">Noticias</li>
+              <Link to="/app/todo"><li className="hover:text-slate-100 duration-300 cursor-pointer">To-Do App</li></Link>
+              <Link to="/app/news"><li className="hover:text-slate-100 duration-300 cursor-pointer">Noticias</li></Link>
               <li className="hover:text-slate-100 duration-300 cursor-pointer">Configuración</li>
             </ul>
             <div className="flex items-center gap-3 text-xs mr-5">
