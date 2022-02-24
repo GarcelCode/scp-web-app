@@ -14,18 +14,18 @@ export function Home() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-slate-700">
-      <header className="bg-slate-500 w-screen p-2 text-white">
+      <header className="bg-slate-500 w-screen p-2 text-slate-300">
         <div className="flex items-center justify-between">
-          <h1 className="text-3xl ml-5">SCP APP</h1>
+          <h1 className="text-3xl ml-5 text-white">SCP APP</h1>
           <div className="flex items-center gap-3">
             <ul className="flex gap-3">
-              <li className="hover:border-b-2">To-Do App</li>
-              <li className="hover:border-b-2">Noticias</li>
-              <li className="hover:border-b-2">Configuración</li>
+              <li className="hover:text-slate-100 duration-300 cursor-pointer">To-Do App</li>
+              <li className="hover:text-slate-100 duration-300 cursor-pointer">Noticias</li>
+              <li className="hover:text-slate-100 duration-300 cursor-pointer">Configuración</li>
             </ul>
             <div className="flex items-center gap-3 text-xs mr-5">
               <div className="hidden md:block">Sesión de: {userInfo.email}</div>
-              <button className="bg-red-500 hover:bg-red-400 p-2 rounded-md" onClick={handleLogOut}>Cerrar Sesión</button>
+              <button className="text-white bg-red-700 hover:bg-red-400 p-2 rounded-md" onClick={handleLogOut}>Cerrar Sesión</button>
             </div>
           </div>
         </div>
