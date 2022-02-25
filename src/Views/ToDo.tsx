@@ -11,7 +11,7 @@ export function ToDo() {
     text: "",
     done: false,
   });
-  const [todos, setTodos] = useState<Array<ITodo>>([]);
+  const [todos, setTodos] = useState<any>([]);
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setTodo({ ...todo, text: e.target.value });
@@ -20,20 +20,16 @@ export function ToDo() {
   const removeHandler = (e: React.MouseEvent<HTMLElement>) => {
     //console.log(e.currentTarget.getAttribute('id'))
     const arrayClone = todos;
-    const arrayFilter = arrayClone.filter(function (item) {
+    const arrayFilter = arrayClone.filter(function (item:ITodo) {
       return item.text !== e.currentTarget.getAttribute("id");
     });
     setTodos(arrayFilter);
   };
 
-  const doneHandler = (e: React.MouseEvent<HTMLElement>) => {
-    
-  };
-
   const addTodo = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
 
-    const validate = todos.filter((item) => {
+    const validate = todos.filter((item:ITodo) => {
       if (item.text === todo.text) {
         return true;
       }
@@ -46,6 +42,7 @@ export function ToDo() {
       const newTodo = todo;
       setTodos([...todos, newTodo]);
       setTodo({ text: "", done: false });
+
     }
   };
 
@@ -77,9 +74,7 @@ export function ToDo() {
             <TodoCard
               text={item.text}
               done={item.done}
-              removeAction={removeHandler}
-              doneAction={doneHandler}
-            />
+              removeAction={removeHandler}/>
           </li>
         ))}
       </ul>
